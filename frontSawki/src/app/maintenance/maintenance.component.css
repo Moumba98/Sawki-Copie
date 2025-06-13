@@ -1,0 +1,95 @@
+/* Ajoute dans maintenance.component.css */
+.maintenance-section {
+  background-color: #f7f7f7;
+  color: #111;
+  padding: 4rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.maintenance-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.maintenance-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.maintenance-img {
+  width: 260px;
+  max-width: 90%;
+  margin: 0 auto 2rem auto;
+  display: block;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.08);
+}
+
+.maintenance-card {
+  border-left: 5px solid #4f46e5;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.maintenance-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 45px rgba(79, 70, 229, 0.1);
+}
+
+.maintenance-desc {
+  font-size: 1.15rem;
+  margin: 18px 0 30px 0;
+  color: #333;
+  text-align: center;
+}
+
+.maintenance-expertise {
+  margin-top: 1.5rem;
+}
+
+.maintenance-expertise strong {
+  color: #4f46e5;
+  font-size: 1.2rem;
+}
+
+.maintenance-expertise ul {
+  margin: 16px 0 10px 20px;
+  padding: 0;
+  list-style: disc;
+}
+
+.maintenance-expertise li {
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .maintenance-container {
+    padding: 0;
+  }
+  .maintenance-card {
+    padding: 1.2rem 0.5rem;
+  }
+  .maintenance-title {
+    font-size: 2rem;
+  }
+}

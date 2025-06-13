@@ -1,0 +1,149 @@
+/* SECTION INTRO ACCUEIL */
+.home-intro {
+  background-color: #fff;
+  padding: 4rem 1rem;
+}
+
+.home-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.home-text {
+  flex: 1 1 500px;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+.home-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.home-text .highlight {
+  color: #2563eb;
+}
+
+.home-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.home-image {
+  flex: 1 1 400px;
+  text-align: center;
+  animation: fadeInRight 1s ease-in-out;
+}
+
+.home-image img {
+  max-width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* SERVICES PREVIEW */
+.accueil-services-preview {
+  background: #f8f9fb;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.section-title .highlight {
+  color: #2563eb;
+}
+
+.services-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.preview-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.preview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.preview-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #111;
+}
+
+.preview-card p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background: #2563eb;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.preview-card img.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+.preview-card:hover img.card-img {
+  transform: scale(1.03);
+}
+

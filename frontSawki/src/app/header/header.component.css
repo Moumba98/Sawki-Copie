@@ -1,0 +1,46 @@
+/* Style du Header */
+header {
+  background-color: black;
+  color: white;
+  position: fixed; /* Fixe le header en haut de la page */
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Ombre subtile */
+  z-index: 1000; /* Assure que le header reste au-dessus de tout autre élément */
+}
+
+/* Style du menu de navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+  position: relative; /* Nécessaire pour le z-index */
+  z-index: 1010; /* Plus élevé que celui du header pour assurer que les liens sont cliquables */
+  padding: 5px 10px; /* Ajoute un peu de padding pour faciliter l'interaction */
+}
+
+nav ul li a:hover {
+  color: #00aaff; /* Change la couleur du lien au survol */
+}
+
+/* Style du contenu principal sous le header */
+body {
+  padding-top: 80px; /* Décale le contenu sous le header fixe */
+}

@@ -1,0 +1,191 @@
+/* ========== HEADER ========== */
+header {
+  background-color: black;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* important */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+  z-index: 1010;
+  padding: 5px 10px;
+}
+
+nav ul li a:hover {
+  color: #00aaff;
+}
+
+nav ul .spacer {
+  flex: 1 1 auto;
+}
+
+nav ul .menu-message-link,
+nav ul li button {
+  margin-left: 10px;
+}
+
+/* Centrer les liens principaux */
+nav ul .main-links {
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  gap: 20px; /* espace entre les liens */
+}
+
+/* ========== LAYOUT ========== */
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  padding-top: 80px; /* pour laisser de la place au header */
+  padding-bottom: 60px; /* pour éviter que le contenu touche le footer */
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h3 {
+  margin-bottom: 12px;
+  color: #00aaff;
+  font-size: 1.2rem;
+}
+
+.footer-section p {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 2000;
+}
+
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px; /* adapte selon la hauteur de ton header */
+    left: 0;
+    width: 100%;
+    background: #222;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  nav ul .spacer {
+    display: none;
+  }
+
+  nav ul .main-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 10px 20px;
+  }
+}
+
+.site-logo {
+  height: 48px;
+  margin-right: 16px;
+  margin-left: 24px; /* optionnel, pour l'espace à gauche */
+  flex-shrink: 0;
+}
+
+/* Pour que les liens prennent toute la largeur restante */
+.nav-links {
+  flex: 1;
+}
+
+/* Pour le bouton menu sur mobile */
+.nav-toggle {
+  margin-left: auto;
+}
+
+

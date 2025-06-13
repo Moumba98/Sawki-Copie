@@ -1,0 +1,98 @@
+/* App container to ensure content doesn't get hidden behind the fixed header */
+.app-container {
+  padding-top: 80px; /* Ajuste cette valeur en fonction de la taille de ton header */
+}
+
+/* Container for the contact list and details */
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+/* Colonne gauche - Contact List */
+.col-md-6 {
+  flex: 1;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Liste des contacts */
+.list-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-group-item {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.list-group-item:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+/* Active contact item */
+.list-group-item.active {
+  background-color: #0b0b0b;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Colonne droite - Contact Details */
+.col-md-6 {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Détails du contact */
+.col-md-6 div {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Placeholder pour le message "Sélectionnez un contact" */
+.col-md-6 p {
+  font-size: 1.2em;
+  color: #888;
+  text-align: center;
+}

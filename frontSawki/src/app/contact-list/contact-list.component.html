@@ -1,0 +1,36 @@
+<div class="list row">
+  <div class="col-md-6">
+    <h4>Contacts List</h4>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let contact of contacts; let i = index"
+        [class.active]="i === currentIndex"
+        (click)="setActiveContact(contact, i)"
+      >
+        {{ contact.nom }} - {{ contact.email }}
+        <!-- Pass the contact.id to deleteContact -->
+        <button
+  class="btn btn-sm btn-danger float-right"
+  (click)="contact.id ? deleteContact(contact.id) : null">
+  Supprimer
+</button>
+
+      </li>
+    </ul>
+  </div>
+
+  <div class="col-md-6">
+    <div *ngIf="currentContact">
+      <h4>Contact Details</h4>
+      <div><strong>Nom :</strong> {{ currentContact.nom }}</div>
+      <div><strong>Email :</strong> {{ currentContact.email }}</div>
+      <div><strong>Téléphone :</strong> {{ currentContact.telephone }}</div> <!-- Ajout du numéro de téléphone -->
+      <div><strong>Message :</strong> {{ currentContact.message }}</div>
+    </div>
+
+    <div *ngIf="!currentContact">
+      <p>Sélectionnez un contact pour voir les détails.</p>
+    </div>
+  </div>
+</div>

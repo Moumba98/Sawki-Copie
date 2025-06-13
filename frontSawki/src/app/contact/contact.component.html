@@ -1,0 +1,65 @@
+<section class="contact-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-5">Contactez <span class="highlight">Sawki Copie</span></h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Infos de contact -->
+      <div class="col-md-5">
+        <div class="contact-card shadow-sm p-4 text-center">
+          <h4>Nos Coordonnées</h4>
+          <p>Pour un devis ou toute information, contactez-nous :</p>
+          <p><strong>Téléphone :</strong></p>
+          <ul class="list-unstyled mb-3">
+            <li>+227 96 43 43 63</li>
+            <li>+227 99 91 91 25</li>
+            <li>+227 89 35 37 38</li>
+          </ul>
+          <p>
+  <strong>Email :</strong>
+  <a href="mailto:sawkicopy@gmail.com" class="text-decoration-none text-dark">
+    sawkicopy&#64;gmail.com
+  </a>
+</p>
+
+<a href="https://wa.me/33753571138" target="_blank" class="btn btn-success mt-3" style="background:#25d366;border:none;">
+  <img src="assets/images/whatsapp-logo-7.png" alt="WhatsApp" style="width: 24px;vertical-align:middle;margin-right:8px;">
+  Nous contacter sur WhatsApp
+</a>
+        </div>
+      </div>
+
+      <!-- Formulaire -->
+      <div class="col-md-6" *ngIf="!submitted">
+        <div class="contact-card shadow-sm p-4">
+          <h4 class="text-center mb-4">Envoyez-nous un Message</h4>
+          <form (ngSubmit)="saveContact()">
+            <div class="form-group mb-3">
+              <input type="text" name="nom" [(ngModel)]="contact.nom" class="form-control" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group mb-3">
+              <input type="email" name="email" [(ngModel)]="contact.email" class="form-control" placeholder="Votre email" required>
+            </div>
+            <div class="form-group mb-3">
+              <input type="tel" name="telephone" [(ngModel)]="contact.telephone" class="form-control" placeholder="Votre numéro" required>
+            </div>
+            <div class="form-group mb-4">
+              <textarea name="message" rows="4" [(ngModel)]="contact.message" class="form-control" placeholder="Votre message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark w-100">Envoyer</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Confirmation -->
+      <div class="col-md-6" *ngIf="submitted">
+        <div class="contact-card shadow-sm p-4 text-center">
+          <h4>{{ successMessage }}</h4>
+          <button (click)="newContact()" class="btn btn-dark mt-3">Ajouter un autre contact</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

@@ -1,0 +1,62 @@
+<header>
+  <nav>
+    <img src="assets/images/Logo-sawki.png" alt="Logo Sawki" class="site-logo">
+    <button class="nav-toggle" (click)="toggleNav()" aria-label="Ouvrir le menu">&#9776;</button>
+    <div class="nav-links" [class.open]="navOpen">
+      <ul>
+        <span class="main-links">
+          <li><a routerLink="/" (click)="closeNav()">Accueil</a></li>
+          <li><a routerLink="/services" (click)="closeNav()">Nos Services</a></li>
+          <li><a routerLink="/fourniture-scolaire" (click)="closeNav()">Fourniture scolaire</a></li>
+          <li><a routerLink="/maintenance" (click)="closeNav()">Maintenance</a></li>
+          <li><a routerLink="/contact" (click)="closeNav()">Contact</a></li>
+        </span>
+        <li class="spacer"></li>
+        <li class="menu-message-link"><a routerLink="/list" (click)="closeNav()">administrateur</a></li>
+        <li *ngIf="isAuthenticated()"><button (click)="logout(); closeNav()">Déconnexion</button></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>À propos</h3>
+      <p>
+        Nous fournissons des équipements scolaires de qualité, des services de maintenance informatique et un accompagnement professionnel pour établissements et particuliers au Niger.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>Email : sawkicopy&#64;gmail.com</p>
+      <p>Téléphone : +227 89 35 37 38</p>
+      <p>Adresse : Quartier Bassora, Niamey, Niger</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Mentions légales</h3>
+      <p>
+        MonEntreprise E.T.S SAWKI COPIE ET MULTIMEDIA<br />
+        Forme juridique : ENTREPRISE INDIVIDUELLE<br />
+        RCCM : NE-NIM-01-2021-A10-11544<br />
+        NIF : 70674/P<br />
+        Directeur de publication : M. ZAKARI DAOUDA BACHIR<br />
+        Hébergement : Serveur local, Niamey
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 MonEntreprise. Tous droits réservés.</p>
+  </div>
+</footer>
+
+
+
+
